@@ -12,7 +12,6 @@ import { Router, RouterOutlet } from '@angular/router';
 export class App   {
 
   protected title = 'Dating app';
-  protected members = signal<User[]>([])
   protected router = inject(Router);
 
  
