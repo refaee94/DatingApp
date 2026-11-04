@@ -20,11 +20,13 @@ public class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Photo>().HasQueryFilter(x => x.IsApproved);
+
         modelBuilder.Entity<IdentityRole>()
             .HasData(
-                new IdentityRole { Id = "member-id", Name = "Member", NormalizedName = "MEMBER", ConcurrencyStamp = "e5da536c-24dd-4f7b-afe8-5a12c7d36de5" },
-                new IdentityRole { Id = "moderator-id", Name = "Moderator", NormalizedName = "MODERATOR", ConcurrencyStamp = "26087936-39c1-40a9-beb9-f170032682cf" },
-                new IdentityRole { Id = "admin-id", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "705cb38f-1228-4270-804f-628ad69a052f" }
+                new IdentityRole { Id = "member-id", Name = "Member", NormalizedName = "MEMBER", ConcurrencyStamp = "67ce20ed-0277-43fb-a4a3-f3b25bf97454" },
+                new IdentityRole { Id = "moderator-id", Name = "Moderator", NormalizedName = "MODERATOR", ConcurrencyStamp = "905b3418-b098-4634-b1ef-4ab65e6a0f50" },
+                new IdentityRole { Id = "admin-id", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "091ccb83-026f-4cb6-b904-2ff989b130eb" }
             );
 
         modelBuilder.Entity<Message>()

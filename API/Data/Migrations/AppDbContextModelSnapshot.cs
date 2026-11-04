@@ -224,6 +224,9 @@ namespace API.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsApproved")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("MemberId")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -271,21 +274,21 @@ namespace API.Data.Migrations
                         new
                         {
                             Id = "member-id",
-                            ConcurrencyStamp = "e5da536c-24dd-4f7b-afe8-5a12c7d36de5",
+                            ConcurrencyStamp = "67ce20ed-0277-43fb-a4a3-f3b25bf97454",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
                             Id = "moderator-id",
-                            ConcurrencyStamp = "26087936-39c1-40a9-beb9-f170032682cf",
+                            ConcurrencyStamp = "905b3418-b098-4634-b1ef-4ab65e6a0f50",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
                             Id = "admin-id",
-                            ConcurrencyStamp = "705cb38f-1228-4270-804f-628ad69a052f",
+                            ConcurrencyStamp = "091ccb83-026f-4cb6-b904-2ff989b130eb",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

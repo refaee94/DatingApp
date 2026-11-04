@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { AccountService } from '../../core/services/account-service';
 import { UserManagement } from './user-managment/user-managment';
-import { PhotoManagment } from './photo-managment/photo-managment';
+import { PhotoManagement } from './photo-managment/photo-managment';
 
 @Component({
   selector: 'app-admin',
-  imports: [UserManagement, PhotoManagment],
+  imports: [UserManagement, PhotoManagement],
   templateUrl: './admin.html',
   styleUrl: './admin.css'
 })
