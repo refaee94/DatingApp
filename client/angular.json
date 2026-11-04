@@ -29,6 +29,10 @@
         "@schematics/angular:pipe": {
           "skipTests": true,
           "path": "src/core/pipes"
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true,
+          "path": "src/shared/directives"
         }
       },
       "root": "",
@@ -119,6 +123,6 @@
     }
   },
   "cli": {
-    "analytics": "6580b68c-3f5f-457e-b75b-44ab3c10fc19"
+    "analytics": "f03147ad-9b62-41dd-8828-a9f2212e3393"
   }
 }
