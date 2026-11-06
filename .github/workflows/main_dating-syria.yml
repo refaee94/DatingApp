@@ -76,7 +76,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'da-2025'
+          app-name: 'dating-syria'
           slot-name: 'Production'
           package: .
           
