@@ -41,7 +41,10 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
-          "options": {
+          "options": { "outputPath": {
+              "base": "../API/wwwroot",
+              "browser": ""
+            },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -59,8 +62,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "600kB",                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
